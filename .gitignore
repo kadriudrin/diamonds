@@ -1,0 +1,34 @@
+# Dependency directories
+node_modules/
+.parcel-cache/
+
+# Production build directory
+/dist/
+
+# Environment variables
+.env
+
+# Editor directories and files
+.vscode/
+*.swp
+*.suo
+*.tmp
+*.user
+*.sln.docstates
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Parcel build output
+.cache/
+dist/
+*.log
+
+# Optional npm cache & logs
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+package-lock.json

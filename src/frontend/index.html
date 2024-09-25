@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamonds</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e23;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        #gamePanel {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #section {
+            width: 100%;
+            max-width: 512px;
+            overflow: hidden;
+        }
+
+        #snackbar {
+            visibility: hidden;
+            width: 250px;
+            height: 30px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            z-index: 1;
+            left: calc(50% - 125px);
+            bottom: 30px;
+        }
+
+        #section {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 25px;
+        }
+
+        #betButton {
+            width: 30%;
+            height: 25px;
+        }
+
+        #lastCrashesText {
+            min-width: 100px;
+        }
+
+        #lastCrashes {
+            display: inline-flex;
+        }
+
+        #outcomes {
+            margin-top: 20px;
+            max-width: 512px;
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            color: white;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainGame">
+        <div id="canvasParent"></div>
+        <div id="container">
+            <div id="section">
+                <span>Balance: </span>
+                <span id="balance"></span>
+            </div>
+            <div id="section">
+                <button id="betButton">Bet</button>
+                <input id="betInput" type="number">
+            </div>
+        </div>
+        <div id="snackbar"></div>
+    </div>
+
+    <!-- New section for possible winning outcomes -->
+    <div id="outcomes">
+        <h2>Possible Winning Outcomes</h2>
+        <table id="outcomesTable">
+            <thead>
+                <tr>
+                    <th>Winning Combination</th>
+                    <th>Multiplier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Seven of a kind</th>
+                    <th>x1000</th>
+                </tr>
+                <tr>
+                    <th>Six of a kind</th>
+                    <th>x100</th>
+                </tr>
+                <tr>
+                    <th>Five of a kind</th>
+                    <th>x50</th>
+                </tr>
+                <tr>
+                    <th>Four of a kind</th>
+                    <th>x5</th>
+                </tr>
+                <tr>
+                    <th>Full House (3 + 2)</th>
+                    <th>x4</th>
+                </tr>
+                <tr>
+                    <th>Three of a kind</th>
+                    <th>x3</th>
+                </tr>
+                <tr>
+                    <th>Three Pairs</th>
+                    <th>x3</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="./index.ts"></script>
+</body>
+
+</html>

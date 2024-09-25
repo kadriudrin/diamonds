@@ -1,0 +1,29 @@
+{
+  "name": "Diamonds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve src/frontend/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "pixi.js": "^8.0.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-raw": "^2.12.0",
+    "@types/pixi.js": "^5.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "string_decoder": "^1.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vm-browserify": "^1.1.2"
+  }
+}
